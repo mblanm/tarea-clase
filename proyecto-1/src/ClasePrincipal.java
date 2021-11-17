@@ -27,51 +27,17 @@ class ClasePrincipal {
         int sumaElementos = 0, sumaElementos2 = 0;
         Double average;
 
-        // access all elements using for each loop
-        // add each element in sum
-        // This approach is not used this course
-        for (int number : numbers) {
-            sumaElementos += number;
-        }
-
-        for (int i = 0; i < numbers.length; i++) {
-            sumaElementos2 += numbers[i];
-        }
-
-        System.out.println("sumaElementos: " + sumaElementos + " -SumaElementos2: " + sumaElementos2);
-
-        StringBuilder miCadena = new StringBuilder("Nueva Cadena");
-
-        System.out.println("StringBuilder       : " + miCadena);
-        System.out.println("StringBuilder length: " + miCadena.length());
-        System.out.println("StringBuilder capacity: " + miCadena.capacity());
-
-        // get the total number of elements
-        int arrayLength = numbers.length;
-        int arrayLengthSmaller = numbersIntSmaller.length;
-
-        System.out.println("arrayLength: " + arrayLength + "- arrayLengthSmaller:" + arrayLengthSmaller);
-
-        for (int f = 0; f < numbers.length; f++) {
-            System.out.println("numbers: [" + f + "] - " + numbers[f]);
-        }
-
-        for (int f = 0; f < numbersIntSmaller.length; f++) {
-            numbersIntSmaller[f] = f * 2;
-            System.out.println("numbers: [" + f + "] - " + numbersIntSmaller[f]);
-        }
-
-        // calculate the average
-        // convert the average from int to double
-        average = ((double) sumaElementos2 / (double) arrayLength);
-
-        System.out.println("Sum = " + sumaElementos2);
-        System.out.println("Average = " + average);
 
         int a[] = { 33, 3, 4, -5 };// declaring and initializing an array
 
         JuegoArray miClase = new JuegoArray();
         miClase.min(a);
+
+        System.out.println("Sum = " + miClase.sumarElementos(a));
+        System.out.println("Average = " + miClase.avg(a));
+        System.out.println("Min = " + miClase.min(a));
+        System.out.println("Max = " + miClase.max(a));
+        System.out.println("Longitad array = " + miClase.longitudArray(a)); // a.length;
     }
 
 }
